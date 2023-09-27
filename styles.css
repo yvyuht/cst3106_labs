@@ -66,8 +66,12 @@ body:before {
 .caps {
   text-transform: uppercase;
 }
-.justified {
+p.justified {
   text-align: justify;
+}
+p.intro::first-letter {
+color:#000;
+font-size:200%;
 }
 p.light {
   color: #6994f0;
@@ -98,7 +102,7 @@ h3 {
 .top-bar {
   height: 220px;
   text-align: center;
-  background-color: #b9b0b0;
+  background-color: #8a8a8a;
   color: #000000;
 }
 .name {
@@ -270,6 +274,7 @@ h3 {
   font-weight: 600;
   line-height: 28px;
 }
+
 @media screen and (max-width: 1150px) {
   .name {
     color: #050404;
