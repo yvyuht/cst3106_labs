@@ -1,0 +1,22 @@
+body { 
+    font-family: Georgia, 'Times New Roman', Times, serif, monospace;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #container {
+    display: flex;
+  }
+  
+  #contact {
+     background-color: lightgoldenrodyellow;      
+    /*background-color: #f0f0f0;*/
+    padding: 20px;
+    inline-size: 30%;
+  }
+  
+  #resume-content {
+    padding: 20px;
+    inline-size: 70%;
+  }
+  
