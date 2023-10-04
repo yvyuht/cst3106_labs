@@ -46,23 +46,27 @@ We use a simple and clear color palette throughout the design.
 ### Sub-title
 - **Design:** Sky-blue background with black text
 - **Mock-up Screenshot:**
-![Nav Mock-up](Sub-title.png)
+  
+![Nav Mock-up](Sub-title5.png)
 ![Nav Mock-up](Sub-title2.png)
 ![Nav Mock-up](Sub-title3.png)
 ![Nav Mock-up](Sub-title4.png)
-![Nav Mock-up](Sub-title5.png)
+![Nav Mock-up](Sub-title.png)
 
 ### Content
 - **Design:** Centered justified section with white background and black text. The first letter of the first paragraph is uppercase
 - **Mock-up Screenshot:**
+  
 ![Content Mock-up](content.png)
 
 - **Design:** Circle bullet point with white background and black text.
 - **Mock-up Screenshot:**
+  
 ![Content Mock-up](content-circle.png)
 
 - **Design:** Square bullet point with white background and black text.
 - **Mock-up Screenshot:**
+  
 ![Content Mock-up](content-square.png)
 
 ## **Conclusion**
