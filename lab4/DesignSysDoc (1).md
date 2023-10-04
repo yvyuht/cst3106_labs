@@ -26,13 +26,14 @@ We use a simple and clear color palette throughout the design.
 
 ### Side-bar
 - **Design:** Sky-blue background with black text, white logo, and social media links.
-- **Mock-up Screenshot:**
 
 | Icon | Links |
 | ------ | ------ |
 | Twitter | https://twitter.com/ |
 | Pinterest | https://www.pinterest.ca/ |
 | Linked-in | https://www.linkedin.com/feed/ |
+
+- **Mock-up Screenshot:**
 
 ![Nav Mock-up](side-bar.png)
 
@@ -46,13 +47,28 @@ We use a simple and clear color palette throughout the design.
 ### Sub-title
 - **Design:** Sky-blue background with black text
 - **Mock-up Screenshot:**
+  
+![Nav Mock-up](Sub-title5.png)
+![Nav Mock-up](Sub-title2.png)
+![Nav Mock-up](Sub-title3.png)
+![Nav Mock-up](Sub-title4.png)
 ![Nav Mock-up](Sub-title.png)
 
 ### Content
 - **Design:** Centered justified section with white background and black text. The first letter of the first paragraph is uppercase
 - **Mock-up Screenshot:**
+  
 ![Content Mock-up](content.png)
 
+- **Design:** Circle bullet point with white background and black text.
+- **Mock-up Screenshot:**
+  
+![Content Mock-up](content-circle.png)
+
+- **Design:** Square bullet point with white background and black text.
+- **Mock-up Screenshot:**
+  
+![Content Mock-up](content-square.png)
 
 ## **Conclusion**
 This documentation serves as a concise reference guide for the design system used in the portfolio project, aiming to facilitate development and maintain consistency in design throughout the project.
