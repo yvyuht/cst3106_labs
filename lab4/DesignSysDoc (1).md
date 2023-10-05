@@ -5,11 +5,10 @@ This documentation provides a clear and simplified overview of the design system
 ## **1. Color Palette**
 We use a simple and clear color palette throughout the design.
 
-- **?Primary Color:** `#007BFF`
+- **Primary Color:** `#fff`
 - **Text Color:** `#000`
-- **?Border Color:** `#d888`
 - **Background Color:** `#fff`
-- **?Accent Color:** `#444`
+- **Accent Color:** `#81a2e9`
 - **Body Before Background Color:** `rgba(255,255,255,0.92)`
 
 
