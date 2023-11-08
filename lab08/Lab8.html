@@ -8,7 +8,7 @@
         /* Styles for the dice container and individual dice */
         #dice-container {
             display: flex;
-            gap: 10px;
+            gap: 20px;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -23,18 +23,13 @@
     align-items: center;
     justify-content: center;
     background-color: #f7a7a7;
-    cursor: pointer;
-    user-select: none;
     border-radius: 10%;
-    display: inline-block;
-    background-size: 600% 100%;
+    position: relative;
     transition: transform 1s;
 }
 
 .dot {
     position: absolute;
-    justify-content: center;
-    align-items: center;
     width: 15px;
     height: 15px;
     background-color: #fff;
@@ -66,44 +61,47 @@
 <body>
     <div id="dice-container">
         <div class="dice" data-value="6">
-            <div class="dot" style="top: 25%; left: 25%;"></div> <!-- Top left dot -->
-            <div class="dot" style="top: 25%; right: 25%;"></div> <!-- Top right dot -->
-            <div class="dot" style="top: 25%; left: 50%;"></div> <!-- Middle left dot -->
-            <div class="dot" style="top: 25%; right: 50%;"></div> <!-- Middle right dot -->
-            <div class="dot" style="bottom: 25%; left: 25%;"></div> <!-- Bottom left dot -->
-            <div class="dot" style="bottom: 25%; right: 25%;"></div> <!-- Bottom right dot -->
+            <div class="dot" style="top: 25%; left: 25%;"></div>
+            <div class="dot" style="top: 25%; right: 25%;"></div>
+            <div class="dot" style="top: 50%; left: 25%; transform: translate(0, -50%);"></div>
+            <div class="dot" style="top: 50%; right: 25%; transform: translate(0, -50%);"></div>
+            <div class="dot" style="bottom: 25%; left: 25%;"></div>
+            <div class="dot" style="bottom: 25%; right: 25%;"></div> 
         </div>
         <div class="dice" data-value="6">
-            <div class="dot" style="top: 25%; left: 25%;"></div> <!-- Top left dot -->
-            <div class="dot" style="top: 25%; right: 25%;"></div> <!-- Top right dot -->
-            <div class="dot" style="top: 25%; left: 50%;"></div> <!-- Middle left dot -->
-            <div class="dot" style="top: 25%; right: 50%;"></div> <!-- Middle right dot -->
-            <div class="dot" style="bottom: 25%; left: 25%;"></div> <!-- Bottom left dot -->
-            <div class="dot" style="bottom: 25%; right: 25%;"></div> <!-- Bottom right dot -->
+                <div class="dot" style="top: 25%; left: 25%;"></div>
+                <div class="dot" style="top: 25%; right: 25%;"></div>
+                <div class="dot" style="top: 50%; left: 25%; transform: translate(0, -50%);"></div>
+                <div class="dot" style="top: 50%; right: 25%; transform: translate(0, -50%);"></div>
+                <div class="dot" style="bottom: 25%; left: 25%;"></div>
+                <div class="dot" style="bottom: 25%; right: 25%;"></div> 
         </div>
     <div class="dice" data-value="6">
-        <div class="dot" style="top: 25%; left: 25%;"></div> <!-- Top left dot -->
-        <div class="dot" style="top: 25%; right: 25%;"></div> <!-- Top right dot -->
-        <div class="dot" style="top: 25%; left: 50%;"></div> <!-- Middle left dot -->
-        <div class="dot" style="top: 25%; right: 50%;"></div> <!-- Middle right dot -->
-        <div class="dot" style="bottom: 25%; left: 25%;"></div> <!-- Bottom left dot -->
-        <div class="dot" style="bottom: 25%; right: 25%;"></div> <!-- Bottom right dot -->
+    
+            <div class="dot" style="top: 25%; left: 25%;"></div>
+            <div class="dot" style="top: 25%; right: 25%;"></div>
+            <div class="dot" style="top: 50%; left: 25%; transform: translate(0, -50%);"></div>
+            <div class="dot" style="top: 50%; right: 25%; transform: translate(0, -50%);"></div>
+            <div class="dot" style="bottom: 25%; left: 25%;"></div>
+            <div class="dot" style="bottom: 25%; right: 25%;"></div> 
     </div>
     <div class="dice" data-value="6">
-        <div class="dot" style="top: 25%; left: 25%;"></div> <!-- Top left dot -->
-        <div class="dot" style="top: 25%; right: 25%;"></div> <!-- Top right dot -->
-        <div class="dot" style="top: 25%; left: 50%;"></div> <!-- Middle left dot -->
-        <div class="dot" style="top: 25%; right: 50%;"></div> <!-- Middle right dot -->
-        <div class="dot" style="bottom: 25%; left: 25%;"></div> <!-- Bottom left dot -->
-        <div class="dot" style="bottom: 25%; right: 25%;"></div> <!-- Bottom right dot -->
+        
+            <div class="dot" style="top: 25%; left: 25%;"></div>
+            <div class="dot" style="top: 25%; right: 25%;"></div>
+            <div class="dot" style="top: 50%; left: 25%; transform: translate(0, -50%);"></div>
+            <div class="dot" style="top: 50%; right: 25%; transform: translate(0, -50%);"></div>
+            <div class="dot" style="bottom: 25%; left: 25%;"></div>
+            <div class="dot" style="bottom: 25%; right: 25%;"></div> 
     </div>
     <div class="dice" data-value="6">
-        <div class="dot" style="top: 25%; left: 25%;"></div> <!-- Top left dot -->
-        <div class="dot" style="top: 25%; right: 25%;"></div> <!-- Top right dot -->
-        <div class="dot" style="top: 25%; left: 50%;"></div> <!-- Middle left dot -->
-        <div class="dot" style="top: 25%; right: 50%;"></div> <!-- Middle right dot -->
-        <div class="dot" style="bottom: 25%; left: 25%;"></div> <!-- Bottom left dot -->
-        <div class="dot" style="bottom: 25%; right: 25%;"></div> <!-- Bottom right dot -->
+        
+        <div class="dot" style="top: 25%; left: 25%;"></div>
+        <div class="dot" style="top: 25%; right: 25%;"></div>
+        <div class="dot" style="top: 50%; left: 25%; transform: translate(0, -50%);"></div>
+        <div class="dot" style="top: 50%; right: 25%; transform: translate(0, -50%);"></div>
+        <div class="dot" style="bottom: 25%; left: 25%;"></div>
+        <div class="dot" style="bottom: 25%; right: 25%;"></div> 
     </div>
 </div>
     
@@ -125,7 +123,9 @@
     
                 dice.attr('data-value', diceValue);
                 dice.css('transform', 'rotate(' + rotationValue + ')');
-    
+
+                console.log('diceValue', diceValue);
+                console.log('rotationValue',rotationValue);
                 // Clear existing dots
                 dice.find('.dot').remove();
     
