@@ -1,10 +1,14 @@
-let diceSelected = [];
+//let diceSelected = [];
+let diceElements=[]; // Declare a variable to store diceElements
         
         const rollButton = document.getElementById('roll-button');
         $(document).ready(function() {
-            $('#roll-button').on('click', function() {
-                onRollButtonClick();
-                updateScoreTable();
+            $('#roll-button').on('click', async function() {
+                // Check if diceElements is not yet fetched
+                
+                onRollButtonClick(); // Fetch diceElements if not already fetched
+                
+                updateScoreTable(diceElements); // Pass diceElements to updateScoreTable
             });
         });
 
@@ -13,7 +17,7 @@ let diceSelected = [];
         let data = await response.json();
         console.log('return data',data);
 
-        let diceElements = data.diceValue;
+        diceElements = data.diceValue;
         console.log('return diceElements array',diceElements);
 
         $('.dice').each(function(index) {
@@ -65,22 +69,36 @@ let diceSelected = [];
 
 async function updateScoreTable(){
     try {
-        let response = await fetch('/roll-dice');
-        let data = await response.json();
         const scoreResponse = await fetch ('/updateScores', {
             method: 'POST',
             headers:{
                 'Content-Type':'application/json',
             },
             body:JSON.stringify({
-                diceValues: data.diceValue,
+                diceValues: diceValues,
+                
             }),
         });
         const scores = await scoreResponse.json();
+        console.log('diceValues:', diceValues);
+        //console.log('diceValues:', diceValues);
+
+
         // Output scores to console (you can update your UI as needed)
         console.log('Three of a Kind Score:', scores.threeOfAKind);
         console.log('Four of a Kind Score:', scores.fourOfAKind);
         console.log('Small Straight Score:', scores.smallStraight);
+        console.log('Large Straight Score:', scores.largeStraight);
+
+        console.log('Ones Score:', scores.Ones);
+        console.log('Twos Score:', scores.Twos);
+        console.log('Threes Score:', scores.Threes);
+        console.log('Fours Score:', scores.Fours);
+        console.log('Fives Score:', scores.Fives);
+        console.log('Sixes Score:', scores.Sixes);
+
+        console.log('Chance Score:', scores.Chance);
+        console.log('Full House Score:', scores.fullHouse);
     } catch (error) {
         console.error('Error:', error);
     }
