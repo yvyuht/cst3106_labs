@@ -9,6 +9,7 @@ let diceElements=[]; // Declare a variable to store diceElements
                 onRollButtonClick(); // Fetch diceElements if not already fetched
                 
                 calculateScores(diceElements); // Pass diceElements to updateScoreTable
+                
             });
         });
 
@@ -65,11 +66,10 @@ let diceElements=[]; // Declare a variable to store diceElements
                     dice.append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
                 }
             }
-            
         });
-        
     }
 
+    let lockedCategories=[];
 async function calculateScores(){
     
     try {
@@ -90,99 +90,84 @@ async function calculateScores(){
         console.log('Four of a Kind Score:', updateScores.fourOfAKind);
         console.log('Small Straight Score:', updateScores.smallStraight);
         console.log('Large Straight Score:', updateScores.largeStraight);
-
         console.log('Ones Score:', updateScores.Ones);
         console.log('Twos Score:', updateScores.Twos);
         console.log('Threes Score:', updateScores.Threes);
         console.log('Fours Score:', updateScores.Fours);
         console.log('Fives Score:', updateScores.Fives);
         console.log('Sixes Score:', updateScores.Sixes);
-
         console.log('Chance Score:', updateScores.Chance);
         console.log('Full House Score:', updateScores.fullHouse);
+        console.log('Yahtzee Score:', updateScores.yahtzee);
+
+        // Update score display
+        const totalDiv = document.getElementById('total');
+        const toakscore = document.getElementById('toak');
+        const foakscore = document.getElementById('foak');
+        const fullhouse = document.getElementById('fullhouse');
+        const smallstraight = document.getElementById('smallStr');
+        const largestraight = document.getElementById('largeStr');
+        const ones = document.getElementById('onesScore');
+        const twos = document.getElementById('twosScore');
+        const threes = document.getElementById('threesScore');
+        const fours = document.getElementById('foursScore');
+        const fives = document.getElementById('fivesScore');
+        const sixes = document.getElementById('sixesScore');
+        const yahtzeescore = document.getElementById('yahtzee');
+        const finalscore = document.getElementById('finalscore');
+
+        if (!lockedCategories.includes(0)) {
+            ones.textContent = updateScores.Ones;
+        }
+        
+        if (!lockedCategories.includes(1)) {
+            twos.textContent = updateScores.Twos;
+        }
     
-        updateScoreDisplays(updateScores);
+        if (!lockedCategories.includes(2)) {
+            threes.textContent = updateScores.Threes;
+        }
+    
+        if (!lockedCategories.includes(3)) {
+            fours.textContent = updateScores.Fours;
+        }
+        
+        if (!lockedCategories.includes(4)) {
+            fives.textContent = updateScores.Fives;
+        }
+    
+        if (!lockedCategories.includes(5)) {
+            sixes.textContent = updateScores.Sixes;
+        }
+    
+        if (!lockedCategories.includes(8)) {
+            toakscore.textContent = updateScores.threeOfAKind;
+        }
+        
+        if (!lockedCategories.includes(9)) {
+            foakscore.textContent = updateScores.fourOfAKind;
+        }
+    
+        if (!lockedCategories.includes(10)) {
+            fullhouse.textContent = updateScores.fullHouse;
+        }
+    
+        if (!lockedCategories.includes(11)) {
+            smallstraight.textContent = updateScores.smallStraight;
+        }
+    
+        if (!lockedCategories.includes(12)) {
+            largestraight.textContent = updateScores.largeStraight;
+        }
+    
+        if (!lockedCategories.includes(13)) {
+            totalDiv.textContent = updateScores.Chance;
+        }
+    
+        if (!lockedCategories.includes(14)) {
+            yahtzeescore.textContent = updateScores.yahtzee;
+        }
     } catch (error) {
         console.error('Error:', error);
     }
 }
-
-function updateScoreDisplays(updateScores){
-    
-   // let isPlayerTurn = true;  
-    //let lockedCategories=[];
-    //let diceRolled = false; 
-        //diceValues = diceElements.map(dice => stopAnimation(dice));
-    
-        // Filter out null values from diceValues
-        //diceValues = diceValues.filter(value => value !== null);
-        //combinedArray = selectedDice.concat(diceElements);
-        //console.log('Combined Array after selecting',combinedArray)
-        
-        const ones = document.getElementById('onesScore');
-        const twos = document.getElementById('twosScore');
-    
-        // Update score display
-       
-            ones.textContent = updateScores.Ones;
-        
-            twos.textContent = updateScores.Twos;
-        
-    /*
-        if (!lockedCategories.includes(2)) {
-            threes.textContent = ThreeScore;
-        }
-    
-        if (!lockedCategories.includes(3)) {
-            fours.textContent = FourScore;
-        }
-        
-        if (!lockedCategories.includes(4)) {
-            fives.textContent = FiveScore;
-        }
-    
-        if (!lockedCategories.includes(5)) {
-            sixes.textContent = SixScore;
-        }
-    
-        if (!lockedCategories.includes(8)) {
-            toakscore.textContent = TOAKscore;
-        }
-        
-        if (!lockedCategories.includes(9)) {
-            foakscore.textContent = FOAKscore;
-        }
-    
-        if (!lockedCategories.includes(10)) {
-            fullhouse.textContent = fullHouseScoreValue;
-        }
-    
-        if (!lockedCategories.includes(11)) {
-            smallstraight.textContent = smallStraight;
-        }
-    
-        if (!lockedCategories.includes(12)) {
-            largestraight.textContent = largeStraight;
-        }
-    
-        if (!lockedCategories.includes(13)) {
-            totalDiv.textContent = ChanceScore;
-        }
-    
-        if (!lockedCategories.includes(14)) {
-            yahtzeescore.textContent = yahtzeeScore;
-        }
-    */
-         // Reset the isPlayerTurn variable to true for the next turn
-         //console.log('Setting isPlayerTurn to true');
-         //isPlayerTurn = true;
-    
-    
-}
-
-
-
-    
-
-
-      

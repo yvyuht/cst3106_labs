@@ -1,43 +1,6 @@
-
-const totalDiv = document.getElementById('total');
-const toakscore = document.getElementById('toak');
-const foakscore = document.getElementById('foak');
-const fullhouse = document.getElementById('fullhouse');
-const smallstraight = document.getElementById('smallStr');
-const largestraight = document.getElementById('largeStr');
-const ones = document.getElementById('onesScore');
-const twos = document.getElementById('twosScore');
-const threes = document.getElementById('threesScore');
-const fours = document.getElementById('foursScore');
-const fives = document.getElementById('fivesScore');
-const sixes = document.getElementById('sixesScore');
-
-const yahtzeescore = document.getElementById('yahtzee');
-const finalscore = document.getElementById('finalscore');
-
-
 let permanentScores = [];
 
-function onRollButtonClick() {
-    // Increment roll count;
-    rollCount++;
-    diceRolled = true; 
-
-    if (rollCount <=3) {
-        diceElements.forEach(dice => startAnimation(dice));
-
-        setTimeout(() => {
-            roll();
-            selectedScore();
-        }, 1000);
-
-    } else if (rollCount === 3) {
-        resetGame();
-    }
-    
-}
-
-/*diceElements.forEach(dice => {
+diceElements.forEach(dice => {
     dice.addEventListener('click', function() {
         dice.classList.toggle('selected');
 
@@ -54,7 +17,7 @@ function onRollButtonClick() {
             }
         }
     });
-});*/
+});
 
 function roll() {
     //diceValues = diceElements.map(dice => stopAnimation(dice));
@@ -64,75 +27,6 @@ function roll() {
     combinedArray = selectedDice.concat(diceElements);
     console.log('Combined Array after selecting',combinedArray)
 
-    // Calculate scores
-    /*const OneScore = calculateOnes(combinedArray);
-    const TwoScore = calculateTwos(combinedArray);
-    const ThreeScore = calculateThrees(combinedArray);
-    const FourScore = calculateFours(combinedArray);
-    const FiveScore = calculateFives(combinedArray);
-    const SixScore = calculateSixes(combinedArray);
-    const ChanceScore = calculateChance(combinedArray);
-    const TOAKscore = calculateThreeOfAKind(combinedArray);
-    const FOAKscore = calculateFourOfAKind(combinedArray);
-    const fullHouseScoreValue = calculateFullHouse(combinedArray);
-    const smallStraight = calculateSmallStraight(combinedArray);
-    const largeStraight = calculateLargeStraight(combinedArray);
-    const yahtzeeScore = calculateYahtzee(combinedArray);*/
-    
-
-    // Update score display
-    if (!lockedCategories.includes(0)) {
-        ones.textContent = OneScore;
-    }
-    
-    if (!lockedCategories.includes(1)) {
-        twos.textContent = TwoScore;
-    }
-
-    if (!lockedCategories.includes(2)) {
-        threes.textContent = ThreeScore;
-    }
-
-    if (!lockedCategories.includes(3)) {
-        fours.textContent = FourScore;
-    }
-    
-    if (!lockedCategories.includes(4)) {
-        fives.textContent = FiveScore;
-    }
-
-    if (!lockedCategories.includes(5)) {
-        sixes.textContent = SixScore;
-    }
-
-    if (!lockedCategories.includes(8)) {
-        toakscore.textContent = TOAKscore;
-    }
-    
-    if (!lockedCategories.includes(9)) {
-        foakscore.textContent = FOAKscore;
-    }
-
-    if (!lockedCategories.includes(10)) {
-        fullhouse.textContent = fullHouseScoreValue;
-    }
-
-    if (!lockedCategories.includes(11)) {
-        smallstraight.textContent = smallStraight;
-    }
-
-    if (!lockedCategories.includes(12)) {
-        largestraight.textContent = largeStraight;
-    }
-
-    if (!lockedCategories.includes(13)) {
-        totalDiv.textContent = ChanceScore;
-    }
-
-    if (!lockedCategories.includes(14)) {
-        yahtzeescore.textContent = yahtzeeScore;
-    }
-
      // Reset the isPlayerTurn variable to true for the next turn
      console.log('Setting isPlayerTurn to true');
      isPlayerTurn = true;
@@ -140,7 +34,7 @@ function roll() {
 }
 
 let isPlayerTurn = true;  
-let lockedCategories=[];
+//let lockedCategories=[];
 let diceRolled = false; 
 // Select all elements with the class "presentScore"
 const scoreElements = document.querySelectorAll('.presentScore');
