@@ -65,7 +65,7 @@ function roll() {
     console.log('Combined Array after selecting',combinedArray)
 
     // Calculate scores
-    const OneScore = calculateOnes(combinedArray);
+    /*const OneScore = calculateOnes(combinedArray);
     const TwoScore = calculateTwos(combinedArray);
     const ThreeScore = calculateThrees(combinedArray);
     const FourScore = calculateFours(combinedArray);
@@ -77,7 +77,7 @@ function roll() {
     const fullHouseScoreValue = calculateFullHouse(combinedArray);
     const smallStraight = calculateSmallStraight(combinedArray);
     const largeStraight = calculateLargeStraight(combinedArray);
-    const yahtzeeScore = calculateYahtzee(combinedArray);
+    const yahtzeeScore = calculateYahtzee(combinedArray);*/
     
 
     // Update score display

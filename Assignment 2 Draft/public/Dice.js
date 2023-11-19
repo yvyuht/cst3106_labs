@@ -5,7 +5,7 @@ const dice3 = document.getElementById('dice3');
 const dice4 = document.getElementById('dice4');
 const dice5 = document.getElementById('dice5');*/
 
-let diceValues =[];
+
 
 // Define an array to store selected dice values
 let selectedDice = [];
