@@ -297,8 +297,6 @@ app.post('/calculate-score', (req,res)=> {
     }
     }
 
-
-
     const OneScore = calculateOnes(diceElements);
     const TwoScore = calculateTwos(diceElements);
     const ThreeScore = calculateThrees(diceElements);
@@ -332,11 +330,13 @@ app.post('/calculate-score', (req,res)=> {
 
     res.json({scores: scores});
 
-  
-    
-
 });
 
+app.post('countFinalScore', (req,res) => {
+    const scores = req.body.scores;
+    let finalScore = 0;
+    
+})
 app.listen(PORT, () => {
 console.log(`Server is running on http://localhost:${PORT}`);
 });
