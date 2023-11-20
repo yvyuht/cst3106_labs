@@ -8,10 +8,10 @@ The Hospital Triage App is poised to deliver an intuitive interface, ensuring a 
 - **Times New Roman**: Times New Roman has a clean and neutral design, making it a safe and straightforward option for conveying information on a formal website.  Times New Roman is often associated with printed documents, especially in academic and professional settings. Using it on a website may create a connection to the conventions of printed materials, contributing to a sense of reliability and credibility.
 
 ## Colour Palette
-  - ** Grey Blue #C3CBD6 **: Used for primary buttons and headings to create a soothing environment for patients.
-  - **Grey Green #748D6F **: Used for background elements to reduce visual strain.
+  - **Grey Blue #C3CBD6**: Used for primary buttons and headings to create a soothing environment for patients.
+  - **Grey Green #748D6F**: Used for background elements to reduce visual strain.
   - **Sky Blue #96B5E0**: Used for the primary interface elements to denote seriousness and authority.
-  - **Baby Orange #FFC07E **: Used for alerts and urgent actions to draw attention.
+  - **Baby Orange #FFC07E**: Used for alerts and urgent actions to draw attention.
 
 ## App Components
 - **Titles**: Clearly labeled as "Hospital Triage - User" for the patient interface and "Hospital Triage - Admin" for the administrative interface, prominently presented in the Arial font.
