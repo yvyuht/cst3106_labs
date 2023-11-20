@@ -1,4 +1,4 @@
-# Hospital Triage App Design Document - Vy Cao
+# Hospital Triage App Design Document
 
 ## Design Overview
 The Hospital Triage App is poised to deliver an intuitive interface, ensuring a seamless experience for both patients and administrative staff in navigating and managing the emergency room process. Emphasizing paramount design principles, the application will prioritize ease of use, accessibility, and operational efficiency.
