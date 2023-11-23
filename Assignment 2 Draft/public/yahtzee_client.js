@@ -87,29 +87,7 @@ scoreElements.forEach((scoreElement, index) => {
                     clickedScore : parseInt(scoreElement.textContent),
                     index : index
                 };
-    
-                /*fetch('/play-category', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify(data)
-                })
-                .then(response => response.json())
-                .then(dataS => {
-                    console.log(dataS);
-                updateBonusAndUpper(dataS.upperTotal, dataS.bonusScore);
-    
-                if (dataS.setScoresFinal){
-                    finalscore.textContent= dataS.FinalScore;
-                    showFinalScore(dataS.FinalScore);
-                    console.log('Game over! Restarted game. Final score for last play:', FinalScore);
-                }
-    
-                resetGame();
-                console.log(dataS.message);
-                })
-                .catch(error => {
-                    console.error('Error: unable to click dice', error);
-                });*/
+
                 try {
                     const playCategoryResponse = await fetch('/play-category', {
                         method: 'POST',
@@ -122,11 +100,12 @@ scoreElements.forEach((scoreElement, index) => {
                         throw new Error('Unable to play category');
                     }
                 
-                    const dataS = await playCategoryResponse.json();
+                    const dataS = await playCategoryResponse.json(); //get the data from the server
                 
                     console.log(dataS);
-                    updateBonusAndUpper(dataS.upperTotal, dataS.bonusScore);
-                
+                    updateBonusAndUpper(dataS.upperTotal, dataS.bonusScore); //update bonus & upper scores display
+                    
+                    //if the server marked the scores as final, end game
                     if (dataS.setScoresFinal) {
                         finalscore.textContent = dataS.finalScore;
                         showFinalScore(dataS.finalScore);
@@ -150,7 +129,7 @@ scoreElements.forEach((scoreElement, index) => {
                                 // Handle errors during the fetch
                                 console.error('Fetch error:', error);
                             });
-                    } else{
+                    } else{ //continue game
                         resetGame();
                         console.log(dataS.message);
                     }
@@ -230,7 +209,6 @@ async function onRollButtonClick() {
     }
 }
 
-
 rollButton.addEventListener("click", onRollButtonClick);
 
 //function definitions
@@ -250,6 +228,7 @@ function resetGame() {
     rollButton.disabled = false;
 }
 
+//reset all display elements
 function restartGame(){
     resetGame();
     scoreElements.forEach((scoreElement) => {
