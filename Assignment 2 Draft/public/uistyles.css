@@ -21,15 +21,24 @@ body {
 }
      
 .dice {
-width: 90px;
-height: 90px;
+width: 100px;
+height: 100px;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: #f7a7a7;
-border-radius: 10%;
+background-image: url('dice.png');
+background-size: 600% 100%;
 position: relative;
-transition: transform 1s;
+animation: none;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1440deg); /* Rotate 4 times (360 degrees * 4) */
+    }
 }
 
 .dot {
