@@ -24,6 +24,7 @@ let setScoresFinal = false;
 let FinalScore = 0;
 
 let currentRound = 1;
+let totalRounds = 13;
 
 // index positions for upperScore and bonusScore
 const upperIndex = 6  
@@ -90,7 +91,7 @@ app.post('/play-category', (req, res) => {
         // Calculate validScores and bonusScore based on permanentScores and update the scores
         calculateScores(permanentScores);
         //end game if 13 rounds. Otherwise continue playing
-        if (currentRound == 13){
+        if (currentRound == totalRounds){
             FinalScore = calculateFinalScore(permanentScores);
             console.log('Final score', FinalScore);
             message = 'Successfully processed the play-category request. You have played 13 rounds. Game is over'
